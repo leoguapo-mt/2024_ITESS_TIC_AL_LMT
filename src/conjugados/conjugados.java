@@ -54,21 +54,30 @@ public class conjugados {
         System.out.println(salida);
 
         // SE ESTABLECE LA SALIDA PARA Z'
-        salida = "EL NUMERO CONJUGADO DE Z' ES = " + a;
+        salida = "EL NUMERO CONJUGADO DE Z' ES = ";
         b *= -1; // Se cambia el signo de b
 
         //imprimir el conjugado
-        
-               
-        
-        
-        if (b < 0) {
-            salida += b;
-
-        } else {
-            salida += "+" + b;
+        if (a != 0) {
+            salida += a;
         }
-        System.out.println(salida + "i");
+
+        if (b < 0) {
+            if (b == -1) {
+                salida += "-i";
+            } else {
+                salida += b + "i";
+            }
+        }
+
+        if (b > 0) {
+            if (b == 1) {
+                salida += (a != 0 ? "+" : "") + "i";
+            } else {
+                salida += "+" + b + "i";
+            }
+        }
+        System.out.println(salida);
 
     }
 }
